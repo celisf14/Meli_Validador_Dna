@@ -11,12 +11,14 @@ la siguiente matriz muestra dos ejemplos de una matriz cuando el resultado de la
 Se elaboro un servico Rest en Spring Boot, con JDK 11, IDE Spring Tools, este servicio expone 2 Metodos.
 
 - POST → /mutant → se encarga de realizar las validacion de los DNA ingresados, adicional Guarda los registros de las peticiones realizadas en base de datos.
+  Endpoint: https://detetoradnmutante.uc.r.appspot.com/mutant
   Inptu: dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"] }
   Output: HTTP 200-OK "isMutant"
           HTTP 403-Forbidden "notIsMutant"
 <img src="/docs_img/validator_200.png" alt="validator_200"/>          
 
 - GET → /stats → genera una estadistica de las preticiones realizadas, retorna 
+  Endpoint: https://detetoradnmutante.uc.r.appspot.com/stats
   Output: {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}
 <img src="/docs_img/stats.png" alt="stats"/>          
 
